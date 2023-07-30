@@ -1,0 +1,57 @@
+Задание 1. cURL-запросы через терминал.
+
+1) Запрос списка задач
+
+$ curl https://todo-app-sky.herokuapp.com
+
+Ответ:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   931  100   931    0     0   2525      0 --:--:-- --:--:-- --:--:--  2536[{"id":70653,"title":"Задача 2","completed":false,"order":null,"url":"/70653"},{"id":70654,"title":"Задача 3","completed":false,"order":null,"url":"/70654"},{"id":70655,"title":"Выполнение этой задачи очень важно","completed":false,"order":null,"url":"/70655"},{"id":70652,"title":"Задача 1","completed":false,"order":null,"url":"/70652"},{"id":70657,"title":"сделать домашку","completed":false,"order":null,"url":"/70657"},{"id":70659,"title":"12345","completed":false,"order":null,"url":"/70659"},{"id":70660,"title":"123456","completed":true,"order":null,"url":"/70660"},{"id":70662,"title":"купить молоко","completed":false,"order":null,"url":"/70662"},{"id":70663,"title":"купить молоко","completed":false,"order":null,"url":"/70663"},{"id":70665,"title":"Метнуться за пивком","completed":true,"order":null,"url":"/70665"}]
+
+2) Создание новой задачи\
+
+$ curl https://todo-app-sky.herokuapp.com/ -X POST -H 'Content-Type: application/json' -d'{"title": "New task"}'
+
+Ответ:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    98  100    77  100    21    227     62 --:--:-- --:--:-- --:--:--   290{"id":70671,"title":"New task","completed":false,"order":null,"url":"/70671"}
+
+3) Отметить задачу выполненной
+
+$ curl https://todo-app-sky.herokuapp.com/70671 -X PATCH -H 'Content-Type: application/json' -d'{"completed": "true"}'
+
+Ответ:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    97  100    76  100    21    205     56 --:--:-- --:--:-- --:--:--   262{"id":70671,"title":"New task","completed":true,"order":null,"url":"/70671"}
+
+4) Редактирование задачи
+
+Ответ:
+
+$ curl https://todo-app-sky.herokuapp.com/70671 -X PATCH -H 'Content-Type: application/json' -d'{"title": "Edited task"}'                                         % Total    % Received % Xferd  
+
+Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   104  100    80  100    24    204     61 --:--:-- --:--:-- --:--:--   265{"id":70671,"title":"Edited task","completed":false,"order":null,"url":"/70671"}
+
+5) Удаление задачи
+
+$ curl https://todo-app-sky.herokuapp.com/70671 -X DELETE
+
+Ответ:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+
+
+
+
+
