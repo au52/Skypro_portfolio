@@ -1,1 +1,6 @@
+1. Тест-сьюты с тест-кейсами здесь https://app.qase.io/run/HW3/dashboard/2, авторизация au20@yandex.ru / Mp3yTf12
 
+2. Баг-репорты здесь https://qa--bug--reports.atlassian.net/jira/software/c/projects/AU3/issues,
+авторизация au20@yandex.ru / Vi5zh6s7
+
+3. Чит-листы здесь https://chlist.sitechco.ru/project/38752/checklist, авторизация au20@yandex.ru / W3cv6t
