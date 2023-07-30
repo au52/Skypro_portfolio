@@ -1,0 +1,7 @@
+1. Доска Miro https://miro.com/app/board/uXjVPv191d8=/?share_link_id=363212114743
+
+2. Тест-кейсы https://app.qase.io/project/HW4, доступ au20@yandex.ru / Mp3yTf12
+
+Внимание! Тестировал только интеграцию компонентов, на глюки оформления не отвлекался!
+
+3. Баг-репорты https://qa--bug--reports.atlassian.net/jira/software/c/projects/DI4/issues, доступ au20@yandex.ru / Vi5zh6s7
