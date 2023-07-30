@@ -1,0 +1,37 @@
+-- Домашняя работа №4
+
+/* 1. Найдите учеников и все группы, в которых 
+преподает учитель с почтой blanda.jamil@yahoo.com. */
+
+SELECT s.user_id, s.group_id, t.email AS teacher_email
+FROM group_student AS s
+JOIN teacher AS t
+ON s.group_id = t.group_id
+WHERE t.email = 'blanda.jamil@yahoo.com';
+
+/* 2. Выведите уровень ученика с почтой gpagac@jacobs.com */
+
+SELECT u.user_id, u.user_email, s.level
+FROM student AS s
+JOIN users AS u
+ON s.user_id = u.user_id
+WHERE user_email = 'gpagac@jacobs.com';
+
+/* 3. Выведите уникальные названия предметов, 
+которые изучает ученик c user_id=11300 
+(таблицы users и subject). */
+
+SELECT DISTINCT u.user_id, s.subject_title
+FROM users AS u
+JOIN subject AS s
+ON s.subject_id = u.subject_id
+WHERE user_id=11300;
+
+/* 4. Выведите уникальные уровни учеников, которые
+занимаются в группе с id = 10. */
+
+SELECT DISTINCT gs.group_id, s.level
+FROM group_student AS gs
+JOIN student AS s
+ON gs.user_id = s.user_id
+WHERE group_id = 10;
